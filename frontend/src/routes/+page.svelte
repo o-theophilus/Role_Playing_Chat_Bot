@@ -78,7 +78,6 @@ situation`;
 </script>
 
 <section>
-	<h1>Role Playing ChatBot</h1>
 	<div class="setting_area">
 		{#if show_settings}
 			{#if error.openai_api_key}
@@ -93,7 +92,7 @@ situation`;
 		{/if}
 		{#if add_role}
 			<br />
-			Chatbot Role
+			Chatbot Role:
 			<textarea
 				placeholder="ChatBot Role"
 				id="message"
@@ -151,9 +150,9 @@ situation`;
 		--var1: 20px;
 		--var2: 8px;
 
-		margin: auto;
+		/* margin: auto; */
 		height: 100vh;
-		max-width: 600px;
+		/* max-width: 600px; */
 		padding: var(--var1);
 	}
 
