@@ -10,7 +10,6 @@ def create_app(config_file="config.py"):
 
     @app.get("/")
     def index():
-
         return jsonify({
             "status": 200,
             "message": "Role Playing ChatBot",
