@@ -6,7 +6,6 @@
 	import Boubble from './boubble.svelte';
 
 	let form = {
-		openai_api_key: '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',
 		history: []
 	};
 	let error = {};
@@ -96,7 +95,7 @@ situation`;
 	{/if}
 	{#if add_role}
 		<textarea
-			placeholder="Role"
+			placeholder="ChatBot Role"
 			id="message"
 			bind:value={role}
 			on:keydown={(e) => {
