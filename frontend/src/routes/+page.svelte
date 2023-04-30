@@ -1,6 +1,6 @@
 <script>
-	import { scale, slide, fly } from 'svelte/transition';
-	import { backInOut, bounceInOut } from 'svelte/easing';
+	import { fly } from 'svelte/transition';
+	import { bounceInOut } from 'svelte/easing';
 
 	import './reset.css';
 	import Boubble from './boubble.svelte';
@@ -8,11 +8,9 @@
 	let form = {
 		history: []
 	};
-	let error = {};
-	$: if (!form.openai_api_key) {
-		error.openai_api_key =
-			'You can find your API key at https://platform.openai.com/account/api-keys';
-	}
+	let error = {
+		openai_api_key: 'You can find your API key at https://platform.openai.com/account/api-keys'
+	};
 
 	let role = `You are a christian priest that adviser, encourages, morivate,
 prays and py arecommends bible verse accorging to the users situation.
@@ -81,8 +79,8 @@ situation`;
 
 <section>
 	<h1>Role Playing ChatBot</h1>
-	{#if show_settings}
-		<div class="setting_area">
+	<div class="setting_area">
+		{#if show_settings}
 			{#if error.openai_api_key}
 				<span class="error">{error.openai_api_key}</span>
 			{/if}
@@ -92,21 +90,23 @@ situation`;
 				bind:value={form.openai_api_key}
 				placeholder="OpenAI API key"
 			/>
-		</div>
-	{/if}
-	{#if add_role}
-		<textarea
-			placeholder="ChatBot Role"
-			id="message"
-			bind:value={role}
-			on:keydown={(e) => {
-				if (e.key === 'Enter') {
-					e.preventDefault();
-					validate();
-				}
-			}}
-		/>
-	{/if}
+		{/if}
+		{#if add_role}
+			<br />
+			Chatbot Role
+			<textarea
+				placeholder="ChatBot Role"
+				id="message"
+				bind:value={role}
+				on:keydown={(e) => {
+					if (e.key === 'Enter') {
+						e.preventDefault();
+						validate();
+					}
+				}}
+			/>
+		{/if}
+	</div>
 
 	<div class="chat_area">
 		<div class="scroller">
@@ -196,6 +196,7 @@ situation`;
 		width: 100%;
 		height: 120px;
 	}
+
 	button:hover {
 		/* aspect-ratio: 1/1; */
 		background-color: rgb(193, 193, 193);
