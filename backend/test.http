@@ -1,0 +1,16 @@
+@hostname = http://127.0.0.1
+@port = 5000
+@host = {{hostname}}:{{port}}
+
+
+
+### Chat
+post  {{host}}/ HTTP/1.1
+content-type: application/json
+
+{
+    "openai_api_key": "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",
+    "say": "i get irritated staying indoors"
+}
+###
+    # "say": "i feel hungry"
