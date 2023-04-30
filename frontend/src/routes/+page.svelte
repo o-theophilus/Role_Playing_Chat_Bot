@@ -49,7 +49,7 @@ situation`;
 		form.message = '';
 		scroll();
 
-		const resp = await fetch(`${import.meta.env.VITE_API_URL}/`, {
+		const resp = await fetch(`${import.meta.env.VITE_API_URL}/chat`, {
 			method: 'post',
 			headers: {
 				'Content-Type': 'application/json'
@@ -80,6 +80,7 @@ situation`;
 </script>
 
 <section>
+	<h1>Role Playing ChatBot</h1>
 	{#if show_settings}
 		<div class="setting_area">
 			{#if error.openai_api_key}
@@ -194,6 +195,11 @@ situation`;
 		resize: none;
 		width: 100%;
 		height: 120px;
+	}
+	button:hover {
+		/* aspect-ratio: 1/1; */
+		background-color: rgb(193, 193, 193);
+		cursor: pointer;
 	}
 
 	.error {

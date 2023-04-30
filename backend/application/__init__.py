@@ -8,8 +8,16 @@ def create_app(config_file="config.py"):
     app.config.from_pyfile(config_file)
     CORS(app)
 
-    @app.post("/")
+    @app.get("/")
     def index():
+
+        return jsonify({
+            "status": 200,
+            "message": "Role Playing ChatBot",
+        })
+
+    @app.post("/chat")
+    def chat():
         if (
             "history" not in request.json
             or not request.json["history"]
