@@ -47,7 +47,7 @@ situation`;
 		form.message = '';
 		scroll();
 
-		const resp = await fetch(`${import.meta.env.VITE_API_URL}/chat`, {
+		const resp = await fetch(`${import.meta.env.VITE_API_URL}chat`, {
 			method: 'post',
 			headers: {
 				'Content-Type': 'application/json'
