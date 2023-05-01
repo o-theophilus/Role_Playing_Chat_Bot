@@ -18,6 +18,7 @@
 <style>
 	section {
 		color: greenyellow;
+		text-align: justify;
 	}
 
 	.user {
