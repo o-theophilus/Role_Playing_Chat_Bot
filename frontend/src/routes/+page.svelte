@@ -121,6 +121,7 @@ situation`;
 	</div>
 
 	<div class="message_area">
+		<h2>Live Demo</h2>
 		{#if error.message}
 			<span class="error">{error.message}</span>
 		{/if}
