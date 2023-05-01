@@ -72,12 +72,13 @@ situation`;
 		chat_area.scrollTop = chat_area.scrollHeight;
 		// chat_area.scrollIntoView({ behavior: 'smooth' });
 	};
-
+	
 	let show_settings = true;
 	let add_role = true;
 </script>
 
 <section>
+	<h2>Live Demo</h2>
 	<div class="setting_area">
 		{#if show_settings}
 			{#if error.openai_api_key}
@@ -121,7 +122,6 @@ situation`;
 	</div>
 
 	<div class="message_area">
-		<h2>Live Demo</h2>
 		{#if error.message}
 			<span class="error">{error.message}</span>
 		{/if}
