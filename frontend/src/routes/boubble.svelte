@@ -18,7 +18,7 @@
 <style>
 	section {
 		color: greenyellow;
-		text-align: justify;
+		/* text-align: justify; */
 	}
 
 	.user {
