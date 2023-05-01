@@ -198,7 +198,6 @@ With your knowledge of Christian teachings and your dedication to helping others
 	}
 	input,
 	textarea {
-		border-radius: var(--var2);
 		border: 2px solid white;
 		padding: var(--var2);
 		color: white;
@@ -215,15 +214,12 @@ With your knowledge of Christian teachings and your dedication to helping others
 	button {
 		cursor: pointer;
 		width: var(--var3);
-		height: var(--var3);
-		border-radius: 50%;
 		flex-shrink: 0;
-		background-color: green;
-		color: white;
+		background-color: white;
 		border: none;
 	}
 	button:hover {
-		background-color: rgb(0, 109, 0);
+		background-color: rgb(195, 195, 195);
 	}
 
 	.error {

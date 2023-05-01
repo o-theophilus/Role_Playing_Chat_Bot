@@ -18,8 +18,6 @@
 <style>
 	section {
 		color: greenyellow;
-		font-family: 'Courier New', monospace;
-		font-size: small;
 	}
 
 	.user {
